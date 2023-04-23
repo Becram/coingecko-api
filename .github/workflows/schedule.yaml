@@ -1,0 +1,28 @@
+name: Automation Tests
+
+on:
+  schedule:
+    - cron: '*/2 * * * *'
+
+env:
+  FROM_EMAIL: "worker-bot@arthuronline.co.uk"
+  TO_EMAIL: "bikram.dhoju@gmail.com"
+  CONTENT_EMAIL: "Test from go app"
+  SUBJECT_EMAIL: "Test Email IGNORE"
+  SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+
+
+jobs:
+  running-coingecko-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-go@v4
+        with:
+          go-version: '1.19.2' # The Go version to download (if necessary) and use.
+      - run: go version
+      - name: Smoke Test
+        if: github.event.schedule == '*/2 * * * *'
+        with:
+          # Run regression test suite
+          command: go run main.go

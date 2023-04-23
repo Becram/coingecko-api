@@ -21,8 +21,6 @@ jobs:
         with:
           go-version: '1.19.2' # The Go version to download (if necessary) and use.
       - run: go version
-      - name: Smoke Test
-        if: github.event.schedule == '*/2 * * * *'
-        with:
-          # Run regression test suite
-          command: go run main.go
+      - name: run script
+        run: |
+          go run main.go

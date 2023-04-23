@@ -2,6 +2,7 @@ name: Automation Run
 
 on:
   schedule:
+    - workflow_dispatch:
     - cron: '*/5 * * * *'
 
 env:
@@ -10,7 +11,6 @@ env:
   CONTENT_EMAIL: "Test from go app"
   SUBJECT_EMAIL: "Test Email IGNORE"
   SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
-
 
 jobs:
   running-coingecko-check:

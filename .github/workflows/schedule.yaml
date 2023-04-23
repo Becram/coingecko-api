@@ -11,6 +11,7 @@ env:
   CONTENT_EMAIL: "Test from go app"
   SUBJECT_EMAIL: "Test Email IGNORE"
   SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+  BASE_URL: "api.coingecko.com"
 
 jobs:
   running-coingecko-check:

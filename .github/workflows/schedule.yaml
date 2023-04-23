@@ -6,7 +6,7 @@ on:
     - cron: '*/5 * * * *'
 
 env:
-  FROM_EMAIL: "worker-bot@arthuronline.co.uk"
+  FROM_EMAIL: "worker-bot@gmail.com"
   TO_EMAIL: "bikram.dhoju@gmail.com"
   CONTENT_EMAIL: "Test from go app"
   SUBJECT_EMAIL: "Test Email IGNORE"

@@ -2,7 +2,7 @@ name: Automation Run
 
 on:
   schedule:
-    - cron: '*/2 * * * *'
+    - cron: '*/5 * * * *'
 
 env:
   FROM_EMAIL: "worker-bot@arthuronline.co.uk"

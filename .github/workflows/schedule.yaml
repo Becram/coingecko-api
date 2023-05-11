@@ -2,8 +2,8 @@ name: Automation Run
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 2 * * *'
+#   schedule:
+#     - cron: '0 2 * * *'
 
 env:
   FROM_EMAIL: "worker-bot@arthuronline.co.uk"
